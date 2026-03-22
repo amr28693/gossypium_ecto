@@ -50,7 +50,7 @@ Repo_ECTO_Gossypium/
 ├── run_all.py                          # Master replication script (run this)
 └── ablation/
     ├── gossypium_ecto_temporal_ablation.py  # Temporal sensitivity analysis (48 date combos)
-    └── tefi_trajectories.json               # Entropy input for ablation
+    └── tefi_trajectories.json               # Entropy input for ablation (trait entropy from frequency information) 
 ```
 
 `run_all.py` executes the full pipeline: entropy preprocessing, ODE fitting (all trait pairings, both c3 configurations), leave-one-out validation, and multistart convergence analysis. Results are written to `results/`.
