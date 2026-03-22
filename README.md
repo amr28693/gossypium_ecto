@@ -4,7 +4,7 @@ Entropy-Initiated Coupled-Trait ODE (ECTO) applied to *Gossypium hirsutum* pange
 
 This repository contains all code to reproduce the results in:
 
-> Rodriguez, A.M. (2026). Cross-domain transfer without structural modification: Applying entropy-initiated coupled-trait ODEs to pangenomic breeding trait dynamics in *Gossypium hirsutum*. *BioSystems* [submitted].
+> Rodriguez, A.M. (2026). Cross-domain transfer without structural modification: Applying entropy-initiated coupled-trait ODEs to pangenomic breeding trait dynamics in *Gossypium hirsutum*. 
 
 The ECTO framework was published in:
 
