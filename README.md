@@ -48,14 +48,20 @@ Place `41588_2026_2523_MOESM3_ESM.xlsx` in the same directory as `run_all.py`. E
 Repo_ECTO_Gossypium/
 ├── README.md
 ├── run_all.py                          # Master replication script (run this)
-└── ablation/
-    ├── gossypium_ecto_temporal_ablation.py  # Temporal sensitivity analysis (48 date combos)
-    └── tefi_trajectories.json               # Entropy input for ablation (trait entropy from frequency information)
+├── ablation/
+│   ├── gossypium_ecto_temporal_ablation.py  # Temporal sensitivity analysis (48 date combos)
+│   └── tefi_trajectories.json               # Entropy input for ablation (trait entropy from frequency information)
+└── meta_validation/
+    ├── meta_validation_1.py                 # Structural constraint quantification (50k random draws + hat matrix)
+    └── meta_validation_1.json               # Full results
+
 ```
 
 `run_all.py` executes the full pipeline: entropy preprocessing, ODE fitting (all trait pairings, both c3 configurations), leave-one-out validation, and multistart convergence analysis. Results are written to `results/`.
 
 The `ablation/` directory contains the temporal sensitivity analysis, which sweeps 48 combinations of cohort pseudo-time assignments to confirm that the results are qualitatively stable regardless of date choice.
+
+The `meta_validation/` directory contains the structural constraint quantification analysis. It samples 50,000 random parameter vectors per trait pairing and reports the fraction achieving joint R² thresholds, demonstrating that the ODE's continuous-trajectory constraint restricts the achievable fit region to <0.004% of the parameter volume. A hat matrix analysis confirms effective degrees of freedom of ~2 for the best-conditioned pairings.
 
 ## Requirements
 
