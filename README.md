@@ -1,10 +1,10 @@
 # Gossypium ECTO
 
-Entropy-Coupled Trait ODE (ECTO) applied to *Gossypium hirsutum* pangenome breeding trait dynamics.
+Entropy-Initiated Coupled-Trait ODE (ECTO) applied to *Gossypium hirsutum* pangenome breeding trait dynamics.
 
 This repository contains all code to reproduce the results in:
 
-> Rodriguez, A.M. (2026). Domain-invariant transfer of an entropy-coupled ODE framework from psychometric to pangenomic breeding trait dynamics in *Gossypium hirsutum*. 
+> Rodriguez, A.M. (2026). Cross-domain transfer without structural modification: Applying entropy-initiated coupled-trait ODEs to pangenomic breeding trait dynamics in *Gossypium hirsutum*. *BioSystems* [submitted].
 
 The ECTO framework was published in:
 
@@ -12,7 +12,7 @@ The ECTO framework was published in:
 
 ## Overview
 
-ECTO is a minimal system of coupled nonlinear ODEs initialized from Shannon entropy indices. This work applies it (with zero structural modification from its original use in longitudinal psychometric data analysis of a cohort) to structural variant (SV) genotype frequency data from a cotton pangenome study, demonstrating domain-invariant transfer from psychometric to genomic dynamics.
+ECTO is a minimal system of coupled nonlinear ODEs initialized from Shannon entropy indices. This work applies it (with zero structural modification from its original use in longitudinal psychometric data analysis of a cohort) to structural variant (SV) genotype frequency data from a cotton pangenome study, demonstrating cross-domain transfer from psychometric to genomic dynamics.
 
 The pipeline:
 1. **Entropy preprocessing**: Compute Shannon entropy from binary SV genotype frequency distributions [p(Ref), p(Alt)] across breeding-era cohorts, pooled across trait-linked loci
@@ -50,7 +50,7 @@ Repo_ECTO_Gossypium/
 ├── run_all.py                          # Master replication script (run this)
 └── ablation/
     ├── gossypium_ecto_temporal_ablation.py  # Temporal sensitivity analysis (48 date combos)
-    └── tefi_trajectories.json               # Entropy input for ablation (trait entropy from frequency information) 
+    └── tefi_trajectories.json               # Entropy input for ablation (trait entropy from frequency information)
 ```
 
 `run_all.py` executes the full pipeline: entropy preprocessing, ODE fitting (all trait pairings, both c3 configurations), leave-one-out validation, and multistart convergence analysis. Results are written to `results/`.
@@ -81,9 +81,9 @@ If you use this code, please cite:
 ```bibtex
 @article{rodriguez2026gossypium,
   author  = {Rodriguez, Anderson M.},
-  title   = {Domain-invariant transfer of an entropy-coupled {ODE} framework
-             from psychometric to pangenomic breeding trait dynamics in
-             \textit{Gossypium hirsutum}},
+  title   = {Cross-domain transfer without structural modification: Applying
+             entropy-initiated coupled-trait {ODE}s to pangenomic breeding
+             trait dynamics in \textit{Gossypium hirsutum}},
   journal = {BioSystems},
   year    = {2026},
   note    = {Submitted}
